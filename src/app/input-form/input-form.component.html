@@ -1,0 +1,25 @@
+<!-- input-form.component.html -->
+<div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" [(ngModel)]="inputData.firstName" />
+  
+    <br />
+  
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" [(ngModel)]="inputData.lastName" />
+  
+    <br />
+  
+    <label for="email">Email:</label>
+    <input type="text" id="email" [(ngModel)]="inputData.email" />
+  
+    <br />
+  
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" [(ngModel)]="inputData.phoneNumber" />
+  
+    <br />
+  
+    <button (click)="saveToFile()">Save to File</button>
+  </div>
+  

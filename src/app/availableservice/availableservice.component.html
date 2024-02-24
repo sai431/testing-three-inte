@@ -1,0 +1,23 @@
+
+<div *ngFor="let item of items">
+    <div>
+      {{ item.name }} - ${{ item.price }}
+      <input type="number" [(ngModel)]="item.quantity" placeholder="Quantity" min="1">
+      <button (click)="addToCart(item)">Add to Cart</button>
+    </div>
+  </div>
+  
+  <div *ngIf="cart.length > 0">
+    <h2>Shopping Cart:</h2>
+    <ul>
+      <li *ngFor="let cartItem of cart">
+        {{ cartItem.name }} - ${{ cartItem.price }} - Quantity: {{ cartItem.quantity }}
+      </li>
+      <button onclick="removeFromCart('productId1')">Remove</button>
+    </ul>
+    <button (click)="generateReport()">Generate Report</button>
+  </div>
+  <div>
+    <button mat-button (click)="openTermsModal()">Open Terms Modal</button>
+<app-feedback></app-feedback>
+  </div>

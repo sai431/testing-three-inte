@@ -1,0 +1,18 @@
+<div>
+    <h2>Customer Feedback</h2>
+  
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" [(ngModel)]="feedback"></textarea>
+  
+    <label for="rating">Rating:</label>
+    <select id="rating" [(ngModel)]="rating">
+      <option value="1">1 (Poor)</option>
+      <option value="2">2 (Fair)</option>
+      <option value="3">3 (Average)</option>
+      <option value="4">4 (Good)</option>
+      <option value="5">5 (Excellent)</option>
+    </select>
+  
+    <button (click)="submitFeedback()">Submit Feedback</button>
+  </div>
+  

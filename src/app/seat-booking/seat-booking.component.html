@@ -1,0 +1,10 @@
+<div>
+    <h2>Seat Booking</h2>
+    <div *ngFor="let seat of availableSeats" class="seat">
+      <span>Seat {{ seat.id }}</span>
+      <button *ngIf="!seat.booked" (click)="bookSeat(seat)">Book</button>
+      <button *ngIf="seat.booked && isAdmin" (click)="unbookSeat(seat)">Unbook</button>
+      <span *ngIf="seat.booked && !isAdmin">Booked</span>
+    </div>
+  </div>
+  
